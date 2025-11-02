@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 function App() {
-  const [number, setNumber] = React.useState("");
-  const [message, setMessage] = React.useState("");
+  const [number, setNumber] = useState("");
+  const [message, setMessage] = useState("");
 
   const checkParity = () => {
     const num = Number(number);
@@ -13,9 +13,9 @@ function App() {
     }
 
     if (num % 2 === 0) {
-      setMessage(`The number \${num} is even!`);
+      setMessage("The number " + num + " is even!");
     } else {
-      setMessage(`Oops, \${num} is odd!`);
+      setMessage("Oops, " + num + " is odd!");
     }
   };
 
